@@ -1,6 +1,7 @@
 using System;
 using DemoWebApiUnityLog4Net.Models;
 using Unity;
+using Unity.log4net;
 
 namespace DemoWebApiUnityLog4Net
 {
@@ -44,6 +45,7 @@ namespace DemoWebApiUnityLog4Net
             // container.RegisterType<IProductRepository, ProductRepository>();
 
             container.RegisterType<ICalculator, Calculator>();
+            container.AddNewExtension<Log4NetExtension>();
         }
     }
 }

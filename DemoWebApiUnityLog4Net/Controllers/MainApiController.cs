@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Web.Http;
 using DemoWebApiUnityLog4Net.Models;
+using log4net;
 
 namespace DemoWebApiUnityLog4Net.Controllers
 {
@@ -17,9 +18,15 @@ namespace DemoWebApiUnityLog4Net.Controllers
         /// <summary>
         /// 
         /// </summary>
+        private ILog _logger;
+
+        /// <summary>
+        /// 
+        /// </summary>
         /// <param name="calc"></param>
-        public MainApiController(ICalculator calc)
+        public MainApiController(ILog logger, ICalculator calc)
         {
+            _logger = logger;
             _calc = calc;
         }
 
@@ -29,6 +36,7 @@ namespace DemoWebApiUnityLog4Net.Controllers
         /// <returns></returns>
         public String Get()
         {
+            _logger.Info(@"Logger Info() called from MainApiController.Get()");
             return $"You have reached MainApiController.Get() 2 + 2 = {_calc.Add(2,2)}";
         }
     }
