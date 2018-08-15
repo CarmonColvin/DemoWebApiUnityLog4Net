@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("DemoWebApiUnityLog4Net")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("A demo solution for Web API, Unity, and Log4Net")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Milo's Tea Company, Inc.")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("DemoWebApiUnityLog4Net")]
-[assembly: AssemblyCopyright("Copyright © Milo's Tea Company, Inc. 2018")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
