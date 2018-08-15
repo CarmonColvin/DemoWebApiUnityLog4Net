@@ -1,5 +1,5 @@
 using System;
-
+using DemoWebApiUnityLog4Net.Models;
 using Unity;
 
 namespace DemoWebApiUnityLog4Net
@@ -42,6 +42,8 @@ namespace DemoWebApiUnityLog4Net
 
             // TODO: Register your type's mappings here.
             // container.RegisterType<IProductRepository, ProductRepository>();
+
+            container.RegisterType<ICalculator, Calculator>();
         }
     }
 }
