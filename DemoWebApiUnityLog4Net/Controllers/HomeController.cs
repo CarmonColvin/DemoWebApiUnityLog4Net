@@ -33,7 +33,7 @@ namespace DemoWebApiUnityLog4Net.Controllers
         // GET: Home
         public String Index()
         {
-            _logger.Info(@"Logger Info() called from HomeController.Index()");
+            _logger.Info(@"HomeController.Index() called");
             return $"You have reached HomeController.Index(). 1 + 1 = {_calc.Add(1,1)}";
         }
     }

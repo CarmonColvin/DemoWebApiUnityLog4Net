@@ -36,7 +36,7 @@ namespace DemoWebApiUnityLog4Net.Controllers
         /// <returns></returns>
         public String Get()
         {
-            _logger.Info(@"Logger Info() called from MainApiController.Get()");
+            _logger.Info(@"MainApiController.Get() called");
             return $"You have reached MainApiController.Get() 2 + 2 = {_calc.Add(2,2)}";
         }
     }

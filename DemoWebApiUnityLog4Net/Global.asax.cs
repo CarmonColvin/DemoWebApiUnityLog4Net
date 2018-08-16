@@ -1,15 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
+using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
-using System.Web.Security;
-using System.Web.SessionState;
-using System.Web.Http;
+using log4net;
 
 namespace DemoWebApiUnityLog4Net
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class Global : HttpApplication
     {
         void Application_Start(object sender, EventArgs e)
@@ -17,7 +17,11 @@ namespace DemoWebApiUnityLog4Net
             // Code that runs on application startup
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
-            RouteConfig.RegisterRoutes(RouteTable.Routes);            
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            // Initalize the logger so it is configured correctly
+            var logger = LogManager.GetLogger(typeof(Global));
+            logger.Info(@"Application started");
         }
     }
 }
